@@ -1,0 +1,297 @@
+ .bg {
+    &-primary {
+        background: $c-primary;
+    }
+    &-secondary{
+        background: $c-secondary;
+    }
+    &-tertiary{
+        background: $c-tertiary;
+    }
+    &-fourth{
+        background: $c-fourth;
+    }
+    &-fifth{
+        background: $c-fifth;
+    }
+    &-default {
+        background-color: radial-gradient(50% 50% at 50% 50%, #497333 0%, #1A451D 100%);
+    }
+
+}
+
+.d {
+    &-flex {
+        display: flex;
+    }
+
+    &-none {
+        display: none;
+    }
+
+    &-block {
+        display: block;
+    }
+    &-inlineblock{
+        display: inline-block;
+    }
+
+    &-md-none {
+        @include rwd($md) {
+            display: none;
+        }
+    }
+
+    &-lg-none {
+        @include rwd($lg) {
+            display: none;
+        }
+    }
+
+    &-xl-none {
+        @include rwd($xl) {
+            display: none;
+        }
+    }
+
+    &-md-block {
+        @include rwd($md) {
+            display: block;
+        }
+    }
+
+    &-lg-block {
+        @include rwd($lg) {
+            display: block;
+        }
+    }
+
+    &-xl-block {
+        @include rwd($xl) {
+            display: block;
+        }
+    }
+
+    &-lg-flex {
+        @include rwd($lg) {
+            display: flex;
+        }
+    }
+}
+
+.width {
+    &-100 {
+        width: 100%;
+    }
+    &-md-50{
+        width: 50%;
+    }
+
+    &-lg-auto {
+        @include rwd($lg) {
+            width: auto;
+        }
+    }
+}
+
+.vh{
+    &-100{
+        height: 100vh !important;
+    }
+}
+
+.m {
+    &-0 {
+        margin: 0px !important;
+    } 
+}
+.p {
+  &y-16{
+    padding-top: 16px !important;
+    padding-bottom: 16px !important;
+  }
+  &x-24{
+    padding-right: 24px !important;
+    padding-left: 24px !important;
+  }
+}
+
+.pos {
+    &-r {
+        position: relative;
+    }
+
+    &-a {
+        position: absolute;
+    }
+}
+
+.text {
+    &-center {
+        text-align: center;
+    }
+}
+
+
+.flex {
+    &-wrap {
+        flex-wrap: wrap;
+    }
+
+    &-md-wrap {
+        @include rwd($md) {
+            flex-wrap: wrap;
+        }
+    }
+
+    &-column {
+        flex-direction: column;
+    }
+
+    &-xl-column {
+        @include rwd($xl) {
+            flex-direction: column;
+        }
+    }
+
+    &-md-row {
+        @include rwd($md) {
+            flex-direction: row;
+        }
+    }
+
+    &-xl-row {
+        @include rwd($xl) {
+            flex-direction: row;
+        }
+    }
+    &-1{
+        flex: 1;
+    }
+}
+
+.align-items {
+    &-center {
+        align-items: center;
+    }
+    &-end{
+        align-items: flex-end;
+    }
+    &-stretch{
+        align-items: stretch;
+    }
+
+    &-xl-stretch {
+        @include rwd($xl) {
+            align-items: stretch;
+        }
+    }
+}
+
+.justify-content {
+    &-end {
+        justify-content: flex-end;
+    }
+
+    &-start {
+        justify-content: flex-start;
+    }
+
+    &-between {
+        justify-content: space-between;
+    }
+
+    &-center{
+        justify-content: center;
+    }
+}
+
+.turn180 {
+    transform: rotateY(180deg);
+}
+
+.btn {
+    cursor: pointer;
+    text-align: center;
+    border: none;
+    background:transparent;
+    padding: 0px;
+
+
+    &-secondary{
+        background: $c-secondary;
+        color: $c-primary;
+        @include fzlh($fz-xxl,$lh-sm);
+        padding: 16px;
+        text-align: center;
+    }
+    &-sm{
+        width: 183px;;
+    }
+    &-md{
+        width: 280px;
+    }
+}
+
+
+
+.radius {
+    &-9 {
+        border-radius: 9px;
+    }
+
+    &-12 {
+        border-radius: 12px;
+    }
+
+    &-13 {
+        border-radius: 13px;
+    }
+
+    &-14 {
+        border-radius: 14px;
+    }
+
+    &-16 {
+        border-radius: 16px;
+    }
+
+    &-26 {
+        border-radius: 26px;
+    }
+
+    &-32 {
+        border-radius: 32px;
+    }
+}
+
+.card {
+    &-primary {
+        background: linear-gradient(180deg, #35A483 0%, #077854 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+    }
+}
+
+.border{
+    &-fifth{
+        border-color: $c-fifth;
+    }
+    &-primary{
+        border-color: $c-primary;
+    }
+    &-1{
+        border-width: 1px;
+    }
+    &-3{
+        border-width: 3px;
+    }
+    &-dotted{
+        border-style: dotted;
+    }
+    &-solid{
+        border-style: solid;
+    }
+}
+

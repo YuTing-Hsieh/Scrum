@@ -1,0 +1,35 @@
+/*rwd*/
+// $sm: 650px;
+$md: 768px;
+$lg: 1280px; 
+$xl: 1440px;
+
+/*color*/
+$c-primary: #ffffff;
+$c-secondary: #000000;
+$c-tertiary: #9C0700;
+$c-fourth: #FF7E06; 
+$c-fifth: #009A50; 
+
+/*font*/
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Noto+Sans+TC&family=Roboto&display=swap');
+$font-family: 'Noto Sans TC', sans-serif;
+$font-roboto:'Roboto',sans-serif;
+$font-lobster: 'Lobster' ,sans-serif;
+
+
+$fz-base: 1rem;
+
+$fz-xs: $fz-base*0.75;/*12px*/
+$fz-sm: $fz-base*0.875;/*14px*/
+$fz-md: $fz-base;/*16px*/
+$fz-lg: $fz-base*1.25;/*20px*/
+$fz-xl: $fz-base*1.5;/*24px*/
+$fz-xxl: $fz-base*1.75;/*28px*/
+$fz-cardNum : $fz-base * 2.25;/*36px*/
+
+$lh-xs: 24px;
+$lh-sm: 30px;
+$lh-md: 32px;
+$lh-lg: 40px;
+$lh-xl: 42px;
