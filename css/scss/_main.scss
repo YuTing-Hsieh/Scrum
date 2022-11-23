@@ -1,0 +1,87 @@
+.logo{
+    width: 203px;
+    padding-top: 35px;
+}
+.caption{
+    @include fzlh($fz-lg,56px);
+    &-xl{
+        @include fzlh(34px,68px);
+    }
+}
+.img{
+    &-card1{
+        width: 653px;
+    }
+    &-card2{
+        width: 536px;
+    }
+    &-card3{
+        width: 616px;
+    }
+    &-coin{
+        &1{
+            width: 88px;
+            top: 47px;
+            left: -145px;
+        }
+        &2{
+            width: 88px;
+            bottom: 21px;
+            right: -136px;
+            transform:scaleY(-1);
+        }    
+        &_black{
+            width: 95px;
+            top: -84px;
+            left: 47px;
+        }
+    }
+    &-dice{
+        width: 147px;
+        bottom: -154px;
+        right: 81px;
+    }
+    &-golden{
+        &1{
+            width: 46px;
+            top: 56px;
+            left: -338px;
+            transform:scalex(-1);
+        }
+        &2{
+            width: 60px;
+            top: 113px;
+            left: -101px;
+            transform:scalex(-1) scaleY(-1);
+        }
+        &3{
+            width: 56px;
+            bottom: -89px;
+            right: 20px;
+        }
+        &4{
+            width: 83px;
+            top: -106px;
+            left: 59px;
+            transform:scalex(-1);
+        }
+        &5{
+            width: 93px;
+            right: -157px;
+            bottom: 120px;
+            transform: rotateY(-15deg);
+        }
+    }
+    &-coins2{
+        width: 250px;
+        bottom: 17px;
+        right: 58px;
+        z-index: 2;
+    }
+    &-jira{
+        width: 101px;
+    }
+    &-confluence{
+        width: 202px;
+    }
+}

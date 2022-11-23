@@ -9,5 +9,16 @@ h1{
 .container{
     margin: 0 auto;
     padding: 0 40px;
+    height: 720px;
+    width: 1280px;
 }
-
+.footer{
+    padding-top: 18.5px;
+    padding-bottom: 18.5px;
+    margin-left: -40px;
+    margin-right: -40px;
+    & * {
+        margin-left: 18px;
+        margin-right: 18px;
+    }
+}

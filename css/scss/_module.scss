@@ -1,297 +1,318 @@
  .bg {
-    &-primary {
-        background: $c-primary;
-    }
-    &-secondary{
-        background: $c-secondary;
-    }
-    &-tertiary{
-        background: $c-tertiary;
-    }
-    &-fourth{
-        background: $c-fourth;
-    }
-    &-fifth{
-        background: $c-fifth;
-    }
-    &-default {
-        background-color: radial-gradient(50% 50% at 50% 50%, #497333 0%, #1A451D 100%);
-    }
+     &-primary {
+         background: $c-primary;
+     }
 
+     &-secondary {
+         background: $c-secondary;
+     }
+
+     &-tertiary {
+         background: $c-tertiary;
+     }
+
+     &-fourth {
+         background: $c-fourth;
+     }
+
+     &-fifth {
+         background: $c-fifth;
+     }
+
+     &-default {
+         background: radial-gradient(50% 50% at 50% 50%, #497333 0%, #1A451D 100%);
+     }
+
+ }
+
+ .d {
+     &-flex {
+         display: flex;
+     }
+
+     &-none {
+         display: none;
+     }
+
+     &-block {
+         display: block;
+     }
+
+     &-inlineblock {
+         display: inline-block;
+     }
+
+     &-md-none {
+         @include rwd($md) {
+             display: none;
+         }
+     }
+
+     &-lg-none {
+         @include rwd($lg) {
+             display: none;
+         }
+     }
+
+     &-xl-none {
+         @include rwd($xl) {
+             display: none;
+         }
+     }
+
+     &-md-block {
+         @include rwd($md) {
+             display: block;
+         }
+     }
+
+     &-lg-block {
+         @include rwd($lg) {
+             display: block;
+         }
+     }
+
+     &-xl-block {
+         @include rwd($xl) {
+             display: block;
+         }
+     }
+
+     &-lg-flex {
+         @include rwd($lg) {
+             display: flex;
+         }
+     }
+ }
+
+ .width {
+     &-100 {
+         width: 100%;
+     }
+
+     &-md-50 {
+         width: 50%;
+     }
+
+     &-lg-auto {
+         @include rwd($lg) {
+             width: auto;
+         }
+     }
+ }
+
+ .vh {
+     &-100 {
+         height: 100vh !important;
+     }
+ }
+
+ .m {
+     &-0 {
+         margin: 0px !important;
+     }
+ }
+
+ .p {
+     &y-16 {
+         padding-top: 16px !important;
+         padding-bottom: 16px !important;
+     }
+
+     &x-24 {
+         padding-right: 24px !important;
+         padding-left: 24px !important;
+     }
+     &t-123{
+        padding-top: 123px;
+     }
+     &t-172{
+        padding-top: 172px;
+     }
+ }
+
+ .pos {
+     &-r {
+         position: relative;
+     }
+
+     &-a {
+         position: absolute;
+     }
+ }
+
+.bottom-0{
+    bottom: 0;
+}
+.top-0{
+    top: 0;
+}
+.left-0{
+    left: 0;
+}
+.right-0{
+    right: 0;
 }
 
-.d {
-    &-flex {
-        display: flex;
-    }
+ .text {
+     &-center {
+         text-align: center;
+     }
+ }
 
-    &-none {
-        display: none;
-    }
 
-    &-block {
-        display: block;
-    }
-    &-inlineblock{
-        display: inline-block;
-    }
+ .flex {
+     &-wrap {
+         flex-wrap: wrap;
+     }
 
-    &-md-none {
-        @include rwd($md) {
-            display: none;
+     &-md-wrap {
+         @include rwd($md) {
+             flex-wrap: wrap;
+         }
+     }
+
+     &-column {
+         flex-direction: column;
+     }
+
+     &-xl-column {
+         @include rwd($xl) {
+             flex-direction: column;
+         }
+     }
+
+     &-md-row {
+         @include rwd($md) {
+             flex-direction: row;
+         }
+     }
+
+     &-xl-row {
+         @include rwd($xl) {
+             flex-direction: row;
+         }
+     }
+
+     &-1 {
+         flex: 1;
+     }
+ }
+
+ .align-items {
+     &-center {
+         align-items: center;
+     }
+
+     &-end {
+         align-items: flex-end;
+     }
+
+     &-stretch {
+         align-items: stretch;
+     }
+
+     &-xl-stretch {
+         @include rwd($xl) {
+             align-items: stretch;
+         }
+     }
+ }
+
+ .justify-content {
+     &-end {
+         justify-content: flex-end;
+     }
+
+     &-start {
+         justify-content: flex-start;
+     }
+
+     &-between {
+         justify-content: space-between;
+     }
+
+     &-center {
+         justify-content: center;
+     }
+ }
+
+
+
+ .radius {
+     &-5 {
+         border-radius: 5px;
+     }
+
+     &-8 {
+         border-radius: 8px;
+     }
+
+     &-16 {
+         border-radius: 16px;
+     }
+
+     &-30 {
+         border-radius: 30px;
+     }
+ }
+
+ .border {
+     &-fifth {
+         border-color: $c-fifth;
+     }
+
+     &-primary {
+         border-color: $c-primary;
+     }
+
+     &-1 {
+         border-width: 1px;
+     }
+
+     &-3 {
+         border-width: 3px;
+     }
+
+     &-dotted {
+         border-style: dotted;
+     }
+
+     &-solid {
+         border-style: solid;
+     }
+ }
+
+ .btn {
+     cursor: pointer;
+     text-align: center;
+     border: none;
+     background: transparent;
+     padding: 0px;
+
+     &-secondary {
+         background: $c-secondary;
+         color: $c-primary;
+         @include fzlh($fz-xxl, 56px);
+         padding: 16px;
+         border-radius: 20px;
+         box-shadow: 8px 8px 0px rgba(0, 0, 0, 0.5);
+        &:hover{
+            background: lighten($c-secondary,20%);
         }
-    }
+     }
 
-    &-lg-none {
-        @include rwd($lg) {
-            display: none;
-        }
-    }
+     &-sm {
+         width: 183px;
+     }
 
-    &-xl-none {
-        @include rwd($xl) {
-            display: none;
-        }
-    }
-
-    &-md-block {
-        @include rwd($md) {
-            display: block;
-        }
-    }
-
-    &-lg-block {
-        @include rwd($lg) {
-            display: block;
-        }
-    }
-
-    &-xl-block {
-        @include rwd($xl) {
-            display: block;
-        }
-    }
-
-    &-lg-flex {
-        @include rwd($lg) {
-            display: flex;
-        }
-    }
-}
-
-.width {
-    &-100 {
-        width: 100%;
-    }
-    &-md-50{
-        width: 50%;
-    }
-
-    &-lg-auto {
-        @include rwd($lg) {
-            width: auto;
-        }
-    }
-}
-
-.vh{
-    &-100{
-        height: 100vh !important;
-    }
-}
-
-.m {
-    &-0 {
-        margin: 0px !important;
-    } 
-}
-.p {
-  &y-16{
-    padding-top: 16px !important;
-    padding-bottom: 16px !important;
-  }
-  &x-24{
-    padding-right: 24px !important;
-    padding-left: 24px !important;
-  }
-}
-
-.pos {
-    &-r {
-        position: relative;
-    }
-
-    &-a {
+     &-md {
+         width: 280px;
+     }
+     &-fixed__bottom{
         position: absolute;
-    }
-}
-
-.text {
-    &-center {
-        text-align: center;
-    }
-}
-
-
-.flex {
-    &-wrap {
-        flex-wrap: wrap;
-    }
-
-    &-md-wrap {
-        @include rwd($md) {
-            flex-wrap: wrap;
-        }
-    }
-
-    &-column {
-        flex-direction: column;
-    }
-
-    &-xl-column {
-        @include rwd($xl) {
-            flex-direction: column;
-        }
-    }
-
-    &-md-row {
-        @include rwd($md) {
-            flex-direction: row;
-        }
-    }
-
-    &-xl-row {
-        @include rwd($xl) {
-            flex-direction: row;
-        }
-    }
-    &-1{
-        flex: 1;
-    }
-}
-
-.align-items {
-    &-center {
-        align-items: center;
-    }
-    &-end{
-        align-items: flex-end;
-    }
-    &-stretch{
-        align-items: stretch;
-    }
-
-    &-xl-stretch {
-        @include rwd($xl) {
-            align-items: stretch;
-        }
-    }
-}
-
-.justify-content {
-    &-end {
-        justify-content: flex-end;
-    }
-
-    &-start {
-        justify-content: flex-start;
-    }
-
-    &-between {
-        justify-content: space-between;
-    }
-
-    &-center{
-        justify-content: center;
-    }
-}
-
-.turn180 {
-    transform: rotateY(180deg);
-}
-
-.btn {
-    cursor: pointer;
-    text-align: center;
-    border: none;
-    background:transparent;
-    padding: 0px;
-
-
-    &-secondary{
-        background: $c-secondary;
-        color: $c-primary;
-        @include fzlh($fz-xxl,$lh-sm);
-        padding: 16px;
-        text-align: center;
-    }
-    &-sm{
-        width: 183px;;
-    }
-    &-md{
-        width: 280px;
-    }
-}
-
-
-
-.radius {
-    &-9 {
-        border-radius: 9px;
-    }
-
-    &-12 {
-        border-radius: 12px;
-    }
-
-    &-13 {
-        border-radius: 13px;
-    }
-
-    &-14 {
-        border-radius: 14px;
-    }
-
-    &-16 {
-        border-radius: 16px;
-    }
-
-    &-26 {
-        border-radius: 26px;
-    }
-
-    &-32 {
-        border-radius: 32px;
-    }
-}
-
-.card {
-    &-primary {
-        background: linear-gradient(180deg, #35A483 0%, #077854 100%);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-    }
-}
-
-.border{
-    &-fifth{
-        border-color: $c-fifth;
-    }
-    &-primary{
-        border-color: $c-primary;
-    }
-    &-1{
-        border-width: 1px;
-    }
-    &-3{
-        border-width: 3px;
-    }
-    &-dotted{
-        border-style: dotted;
-    }
-    &-solid{
-        border-style: solid;
-    }
-}
+        bottom:44px;
+        right: 48px;;
+     }
+ }
 
