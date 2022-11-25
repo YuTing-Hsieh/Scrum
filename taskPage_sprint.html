@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scrum 新手村</title>
+    <link rel="icon" href="image/favicon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <link rel="stylesheet" href="css/all.css">
+</head>
+
+<body>
+    <div class="bg-default vh-100 d-flex justify-content-center align-items-center">
+        <div class="container pos-r d-flex flex-column pt-50">
+            <ul class="l-list mb-43">
+                <li class="l-list__item d-flex align-items-start">
+                    <img src="image/jason.png" alt="jason" class="img-people">
+                    <div class="dialog dialog-left dialog-lh-md">
+                        那你來試試看，在這經典的Surum流程圖中，這些流程分別代表哪一個會議呢？
+                    </div>
+                </li>
+                <li class="l-list__item d-flex align-items-start">
+                    <div class="dialog dialog-noPeople dialog-lh-md">
+                        <span>提示：請用拖移的方式將標籤拖移至對應的方框裡</span>
+                    </div>
+                </li>              
+            </ul>
+            <div class="pos-r" >
+                <img src="image/vector.png" alt="sprint" class="img-vector">
+                <p class="sprintTitle pos-a">Sprint</p>
+                <div class="btn-lg bg-tertiary py-30 text-center radius-8 pos-a dailyScrum">每日站立會議(Daily Scrum)</div>
+                <ul class="sprintListDrag sprintListDrag-container d-flex pos-a" id="springListDrag">
+                    <li class="btn-lg bg-fourth py-30 text-center radius-8 draggable" draggable="true" data-id="1" >
+                        短衝檢視會議(Sprint Review)
+                        <i class="fa-solid fa-arrows-up-down-left-right ml-10"></i>
+                    </li>
+                    <li class="btn-lg bg-fifth py-30 text-center radius-8 draggable" draggable="true" data-id="2" >
+                        短衝自省會議(Sprint Retrospective)
+                        <i class="fa-solid fa-arrows-up-down-left-right ml-10"></i>
+                    </li>
+                </ul>
+                <div class="sprintListDragResult sprintListDrag-container pos-a">
+                    <div class="pos-r">                        
+                        <ul class="d-flex pos-a top-0">
+                            <li class="btn-lg py-30 text-center radius-8 border-fourth"></li>
+                            <li class="btn-lg py-30 text-center radius-8 border-fifth"></li>
+                        </ul> 
+                        <ul class="d-flex sprintListDrag-container pos-r" id="springListDragResult" style="z-index: 1;"></ul>  
+                    </div>                    
+                   
+                </div>
+                         
+            </div>            
+            <a href="#" class="btn btn-secondary wrap btn-sm btn-fixed__bottom" id="finsihSprint">
+                完成
+            </a>
+        </div>
+    </div>
+
+
+    <div class="modal bg-secondary" id="message">
+        <div class="modal-body d-flex flex-column align-items-center">
+            <p class="pb-30 messageContent"></p>
+            <a class="btn bg-tertiary btn-lg radius-9 py-10" rel="modal:close">確定</a>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+    <script src="js/Sortable.min.js"></script>
+    <script src="js/all.js"></script>
+</body>
+
+</html>

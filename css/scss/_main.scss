@@ -1,87 +1,278 @@
-.logo{
+.logo {
     width: 203px;
     padding-top: 35px;
 }
-.caption{
-    @include fzlh($fz-lg,56px);
-    &-xl{
-        @include fzlh(34px,68px);
+
+.caption {
+    @include fzlh($fz-lg, 56px);
+
+    &-xl {
+        @include fzlh(34px, 68px);
     }
 }
-.img{
-    &-card1{
+
+.img {
+    &-card1 {
         width: 653px;
     }
-    &-card2{
+
+    &-card2 {
         width: 536px;
     }
-    &-card3{
+
+    &-card3 {
         width: 616px;
     }
-    &-coin{
-        &1{
+
+    &-coin {
+        &1 {
             width: 88px;
             top: 47px;
             left: -145px;
         }
-        &2{
+
+        &2 {
             width: 88px;
             bottom: 21px;
             right: -136px;
-            transform:scaleY(-1);
-        }    
-        &_black{
+            transform: scaleY(-1);
+        }
+
+        &_black {
             width: 95px;
             top: -84px;
             left: 47px;
         }
     }
-    &-dice{
+
+    &-dice {
         width: 147px;
         bottom: -154px;
         right: 81px;
     }
-    &-golden{
-        &1{
+
+    &-golden {
+        &1 {
             width: 46px;
             top: 56px;
             left: -338px;
-            transform:scalex(-1);
+            transform: scalex(-1);
         }
-        &2{
+
+        &2 {
             width: 60px;
             top: 113px;
             left: -101px;
-            transform:scalex(-1) scaleY(-1);
+            transform: scalex(-1) scaleY(-1);
         }
-        &3{
+
+        &3 {
             width: 56px;
             bottom: -89px;
             right: 20px;
         }
-        &4{
+
+        &4 {
             width: 83px;
             top: -106px;
             left: 59px;
-            transform:scalex(-1);
+            transform: scalex(-1);
         }
-        &5{
+
+        &5 {
             width: 93px;
             right: -157px;
             bottom: 120px;
             transform: rotateY(-15deg);
         }
     }
-    &-coins2{
+
+    &-coins2 {
         width: 250px;
         bottom: 17px;
         right: 58px;
         z-index: 2;
     }
-    &-jira{
+
+    &-jira {
         width: 101px;
+
+        &-lg {
+            width: 123px;
+        }
     }
-    &-confluence{
+
+    &-confluence {
         width: 202px;
+        &-lg{
+            width: 186px;
+        }
     }
+
+    &-people {
+        width: 65.04px;
+    }
+
+    &-peach {
+        width: 21.17px;
+        margin-top: 5.27px;
+    }
+
+    &-dice2{
+        width: 98px;
+        left: 68px;
+        bottom: 67px;
+    }
+    &-coins{
+        width: 202px;
+        top: 69px;
+        right: 106px;
+    }
+    &-coins2{
+        width: 269px;
+        height: 277px;
+        top: 167px;
+        right: 56px;
+    }
+    &-vector{
+        width: 890px;
+    }
+}
+
+.dragbox {
+    width: 794px;
+    height: 289px;
+    padding: 22px 28px;
+    position: relative;
+    margin-top: -5px;
+    margin-bottom: -5px;
+    &-content {
+        width: 516px;
+        line-height: $lh-xl;
+    }
+    &::before{
+        position: absolute;
+        top: calc(50% - 15px);
+    }
+    &#productBacklog::before {
+        content: "產品待辦清單";
+        margin-left: -236px;
+        font-size: 30px;
+    }
+    &#springBacklog::before {
+        content: "開發 A 組     短衝待辦清單";
+        white-space: pre-wrap;
+        width: 180px;
+        margin-left: -246px;
+        font-size: 30px;
+    }
+    &-remark{
+        padding-top: 7px;
+        @include fzlh($fz-lg,$lh-xl);
+    }
+}
+
+.strong {
+    font-size: $fz-xl;
+    font-weight: 900;
+}
+
+.poker {
+    width: 168px;
+    height: 235px;
+    background: $c-primary;
+    color: $c-secondary;
+    padding: 6px 4px; 
+    border-radius: 5px;
+    margin: 0 7px;
+    cursor: pointer;
+    @include fzlh($fz-md,$lh-xs);
+    &:hover{
+        transform: translateY(-10px);
+    }
+    &-suits{
+        font-family: $font-lobster;
+        @include fzlh($fz-cardNum,$lh-sm);
+        padding: 0px 6px;        
+        &.transXY{
+            transform: rotateX(180deg) rotateY(180deg);
+        }
+    }
+    &__box{
+        background: transparent;
+        border: 2px dashed $c-primary;
+    }
+}
+
+.calScore{
+    @include fzlh(40px,$lh-sm);
+    font-family: $font-roboto;
+    top: 540px;
+    right: 81px;
+    .warning{
+        color: $c-tertiary;
+    }
+}
+
+.springList{
+    &__item + &__item{
+        margin-left: 20px;
+    }
+    &__content{
+        @include fzlh($fz-sm,$lh-xs);
+    }
+}
+.sprintTitle{
+    font-family: $font-roboto;
+    @include fzlh(50px,$lh-md);
+    left: 145px;
+    bottom: 118px;
+}
+.dailyScrum{
+    left: 97px;
+    top: 44px;
+}
+
+.sprintListDrag{
+    top: 0px;
+    right: 0px;
+    li{
+        margin: 0 10px;
+    }
+    &Result{
+        left: 388px;
+        bottom: 56px;
+
+        li{
+            margin: 0 10px;
+            height: 77px;
+            background: transparent;
+            border: 2px dashed;
+        }
+    }
+    &-container{
+        height: 77px;
+        width: 642px;
+        & > li{
+            border: none;
+        }
+    }
+    
+}
+.feedbackList{
+    &__content{
+        font-size: 30px;
+        margin-bottom: 30px;
+        text-align: center;
+    }
+}
+
+
+.radioGroup input:checked + .poker {
+    background: $c-secondary !important; 
+    color: $c-primary !important;
+}
+.radioGroup input:checked + .poker img {
+    // 黑轉白
+    filter: invert(100%) sepia(76%) saturate(0%) hue-rotate(302deg) brightness(105%) contrast(101%);
 }

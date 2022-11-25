@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scrum 新手村</title>
+    <link rel="icon" href="image/favicon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
+    <link rel="stylesheet" href="css/all.css">
+</head>
+
+<body>
+    <div class="bg-default vh-100 d-flex justify-content-center align-items-center">
+        <div class="container pos-r d-flex flex-column align-items-center pt-44">
+            <div id="productBacklog" class="dragbox d-flex mb-20">
+                <div class="poker d-flex flex-column justify-content-between draggable" draggable="true" data-score="8">
+                    <div class="poker-suits">8 <img src="image/peach.png" alt="peach" class="img-peach"></div>
+                    <div class="poker-body text-center">會員系統 <br> (登入、註冊、權限管理)</div>
+                    <div class="poker-suits transXY">8 <img src="image/peach.png" alt="peach" class="img-peach"></div>
+                </div>
+                <div class="poker d-flex flex-column justify-content-between draggable" draggable="true" data-score="8">
+                    <div class="poker-suits">8 <img src="image/peach.png" alt="peach" class="img-peach"></div>
+                    <div class="poker-body text-center">後台職缺管理功能 <br> (資訊上架、下架、顯示應徵者資料)</div>
+                    <div class="poker-suits transXY">8 <img src="image/peach.png" alt="peach" class="img-peach"></div>
+                </div>
+                <div class="poker d-flex flex-column justify-content-between draggable" draggable="true" data-score="13">
+                    <div class="poker-suits">13 <img src="image/peach.png" alt="peach" class="img-peach"></div>
+                    <div class="poker-body text-center">應徵者的線上履歷編輯器</div>
+                    <div class="poker-suits transXY">13 <img src="image/peach.png" alt="peach" class="img-peach"></div>
+                </div>
+                <div class="poker d-flex flex-column justify-content-between draggable" draggable="true" data-score="5">
+                    <div class="poker-suits">5 <img src="image/peach.png" alt="peach" class="img-peach"></div>
+                    <div class="poker-body text-center">前台職缺列表 <br> (職缺詳細內容、點選可發送應徵意願)</div>
+                    <div class="poker-suits transXY">5 <img src="image/peach.png" alt="peach" class="img-peach"></div>
+                </div>                
+            </div>
+            <div class="d-flex pos-r">
+                <ul class="d-flex pos-a pos-center z-index-0">
+                    <li class="poker poker__box"></li>
+                    <li class="poker poker__box"></li>
+                    <li class="poker poker__box"></li>
+                    <li class="poker poker__box"></li>
+                </ul>
+                <div id="springBacklog" class="d-flex dragbox border-5 border-solid radius-30">               
+                </div>
+            </div>
+           
+            <p class="dragbox-remark">請把需求拖移到方框中(加總後不得超過20點)</p>
+            <p class="calScore pos-a"><span class="totalScore"></span> / 20</p>
+            <img src="image/coins2.png" alt="籌碼" class="img-coins2 pos-a">
+            
+            <a href="#" class="btn btn-secondary wrap btn-sm btn-fixed__bottom" id="startSprint">
+                準備好了！ <br> 開始 Sprint
+            </a>
+        </div>
+    </div>
+
+
+    <div class="modal bg-secondary" id="message">
+        <div class="modal-body d-flex flex-column align-items-center">
+            <p class="pb-30 messageContent"></p>
+            <a class="btn bg-tertiary btn-lg radius-9 py-10" rel="modal:close">確定</a>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+    <script src="js/Sortable.min.js"></script>
+    <script src="js/all.js"></script>
+</body>
+
+</html>

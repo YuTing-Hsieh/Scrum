@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scrum 新手村</title>
+    <link rel="icon" href="image/favicon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
+    <link rel="stylesheet" href="css/all.css">
+</head>
+
+<body>
+    <div class="bg-default vh-100 d-flex justify-content-center align-items-center">
+        <div class="container pos-r d-flex flex-column align-items-center pt-50">
+            <ul class="l-list">
+                <li class="l-list__item d-flex align-items-start">
+                    <img src="image/allen.png" alt="allen" class="img-people">
+                    <div class="dialog dialog-left dialog-lh-md">
+                        哇賽新來的，你真的很幸運，今天剛好是開發B組的
+                        Retro，你也見識一下，看看Retro都該做些什麼吧~我們會在會議裡請團隊成員提出哪些是做得好的地方、哪些可以繼續改善的地方？並記錄再Confluence中。
+                    </div>
+                </li>
+                <li class="l-list__item d-flex align-items-start">
+                    <div class="dialog dialog-noPeople dialog-lh-md">
+                        請選擇適合 Retro的回饋卡！思考看看哪一張牌是『正面表述』呢？
+                    </div>
+                </li>
+                <li class="l-list__item d-flex">
+                    <div class="dialog-noPeople flex-1">
+                        <P class="feedbackList__content">做得好的地方</P>
+                        <div class="d-flex justify-content-center radioGroup">
+                            <label>
+                                <input type="radio" name="radioGroup1" id="" class="d-none" value="false">
+                                <div class="poker d-flex flex-column justify-content-between draggable" draggable="true" data-score="8">
+                                    <div class="poker-suits">A <img src="image/peach.png" alt="peach" class="img-peach"></div>
+                                    <div class="poker-body text-center">這次我幫了很多人救火耶</div>
+                                    <div class="poker-suits transXY">A <img src="image/peach.png" alt="peach" class="img-peach"></div>
+                                </div>
+                            </label>
+                            <label>
+                                <input type="radio" name="radioGroup1" id="" class="d-none" value="true">
+                                <div class="poker d-flex flex-column justify-content-between draggable" draggable="true" data-score="8">
+                                    <div class="poker-suits">A <img src="image/peach.png" alt="peach" class="img-peach"></div>
+                                    <div class="poker-body text-center">大家在開發上都會互相 cover，讓任務都有準時在時間內完成。</div>
+                                    <div class="poker-suits transXY">A <img src="image/peach.png" alt="peach" class="img-peach"></div>
+                                </div>
+                            </label>
+                        </div>     
+                    </div>
+                    <div class="flex-1">
+                        <P class="feedbackList__content">有哪些可以做得更好？</P>
+                        <div class="d-flex justify-content-center radioGroup">
+                            <label>
+                                <input type="radio" name="radioGroup2" id="" class="d-none" value="true">
+                                <div class="poker d-flex flex-column justify-content-between draggable" draggable="true" data-score="8">
+                                    <div class="poker-suits">A <img src="image/peach.png" alt="peach" class="img-peach"></div>
+                                    <div class="poker-body text-center">可以記錄這次的開發時間，讓預估團隊點數可以更精準。</div>
+                                    <div class="poker-suits transXY">A <img src="image/peach.png" alt="peach" class="img-peach"></div>
+                                </div>                               
+                            </label>
+                            <label>
+                                <input type="radio" name="radioGroup2" id="" class="d-none" value="false">
+                                <div class="poker d-flex flex-column justify-content-between draggable" draggable="true" data-score="8">
+                                    <div class="poker-suits">A <img src="image/peach.png" alt="peach" class="img-peach"></div>
+                                    <div class="poker-body text-center">開發時間預估不準確，請後端下次改進，避免Delay到我。</div>
+                                    <div class="poker-suits transXY">A <img src="image/peach.png" alt="peach" class="img-peach"></div>
+                                </div>                               
+                            </label>
+                        </div>     
+                    </div>
+                </li>
+            </ul>
+
+            <a href="#" class="btn btn-secondary btn-md btn-fixed__bottom" id="gotoFinish">
+                我想我了解了
+            </a>
+        </div>
+    </div>
+    <div class="modal bg-secondary" id="message">
+        <div class="modal-body d-flex flex-column align-items-center">
+            <p class="pb-30 messageContent"></p>
+            <a class="btn bg-tertiary btn-lg radius-9 py-10" rel="modal:close">確定</a>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+    <script src="js/all.js"></script>
+</body>
+
+</html>

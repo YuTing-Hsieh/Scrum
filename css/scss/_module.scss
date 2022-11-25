@@ -1,28 +1,27 @@
  .bg {
      &-primary {
-         background: $c-primary;
+         background: $c-primary !important;
      }
 
      &-secondary {
-         background: $c-secondary;
+         background: $c-secondary !important;
      }
 
      &-tertiary {
-         background: $c-tertiary;
+         background: $c-tertiary !important;
      }
 
      &-fourth {
-         background: $c-fourth;
+         background: $c-fourth !important;
      }
 
      &-fifth {
-         background: $c-fifth;
+         background: $c-fifth !important;
      }
 
      &-default {
          background: radial-gradient(50% 50% at 50% 50%, #497333 0%, #1A451D 100%);
      }
-
  }
 
  .d {
@@ -111,24 +110,90 @@
      &-0 {
          margin: 0px !important;
      }
+
+     &l-10 {
+         margin-left: 10px !important;
+     }
+
+     &l-24 {
+         margin-left: 24px !important;
+     }
+
+     &b-15 {
+         margin-bottom: 15px !important;
+     }
+
+     &b-20 {
+         margin-bottom: 20px !important;
+     }
+
+     &b-43 {
+         margin-bottom: 43px !important;
+     }
+
  }
 
  .p {
+     &y-9 {
+         padding-top: 9px !important;
+         padding-bottom: 9px !important;
+     }
+
+     &y-10 {
+         padding-top: 10px !important;
+         padding-bottom: 10px !important;
+     }
+
      &y-16 {
          padding-top: 16px !important;
          padding-bottom: 16px !important;
      }
 
+     &y-23 {
+         padding-top: 23px !important;
+         padding-bottom: 23px !important;
+     }
+
+     &y-30 {
+         padding-top: 30px !important;
+         padding-bottom: 30px !important;
+     }
+
+     &y-50 {
+         padding-top: 50px !important;
+         padding-bottom: 50px !important;
+     }
+
+
      &x-24 {
          padding-right: 24px !important;
          padding-left: 24px !important;
      }
-     &t-123{
-        padding-top: 123px;
+
+     &t-44 {
+         padding-top: 44px !important;
      }
-     &t-172{
-        padding-top: 172px;
+
+     &t-50 {
+         padding-top: 50px !important;
      }
+
+     &t-123 {
+         padding-top: 123px !important;
+     }
+
+     &t-172 {
+         padding-top: 172px !important;
+     }
+
+     &t-175 {
+         padding-top: 175px !important;
+     }
+
+     &b-30 {
+         padding-bottom: 30px !important;
+     }
+
  }
 
  .pos {
@@ -139,20 +204,30 @@
      &-a {
          position: absolute;
      }
+
+     &-center {
+         top: 50%;
+         left: 50%;
+         transform: translate(-50%, -50%);
+         /*扣回元素的一半高度、寬度*/
+     }
  }
 
-.bottom-0{
-    bottom: 0;
-}
-.top-0{
-    top: 0;
-}
-.left-0{
-    left: 0;
-}
-.right-0{
-    right: 0;
-}
+ .bottom-0 {
+     bottom: 0;
+ }
+
+ .top-0 {
+     top: 0;
+ }
+
+ .left-0 {
+     left: 0;
+ }
+
+ .right-0 {
+     right: 0;
+ }
 
  .text {
      &-center {
@@ -204,6 +279,10 @@
          align-items: center;
      }
 
+     &-start {
+         align-items: start;
+     }
+
      &-end {
          align-items: flex-end;
      }
@@ -235,52 +314,77 @@
      &-center {
          justify-content: center;
      }
+
+     &-evenly {
+         justify-content: space-evenly;
+     }
+
  }
-
-
 
  .radius {
      &-5 {
-         border-radius: 5px;
+         border-radius: 5px !important;
      }
 
      &-8 {
-         border-radius: 8px;
+         border-radius: 8px !important;
+     }
+
+     &-9 {
+         border-radius: 9px !important;
      }
 
      &-16 {
-         border-radius: 16px;
+         border-radius: 16px !important;
      }
 
      &-30 {
-         border-radius: 30px;
+         border-radius: 30px !important;
+     }
+
+     &-top-16 {
+         border-top-left-radius: 16px !important;
+         border-top-right-radius: 16px !important;
+     }
+
+     &-bottom-16 {
+         border-bottom-left-radius: 16px !important;
+         border-bottom-right-radius: 16px !important;
      }
  }
 
  .border {
      &-fifth {
-         border-color: $c-fifth;
+         border-color: $c-fifth !important;
      }
 
-     &-primary {
-         border-color: $c-primary;
+     &-fourth {
+         border-color: $c-fourth !important;
      }
 
      &-1 {
-         border-width: 1px;
+         border-width: 1px !important;
      }
 
      &-3 {
-         border-width: 3px;
+         border-width: 3px !important;
+     }
+
+     &-5 {
+         border-width: 5px !important;
      }
 
      &-dotted {
-         border-style: dotted;
+         border-style: dotted !important;
      }
 
      &-solid {
-         border-style: solid;
+         border-style: solid !important;
      }
+ }
+
+ .z-index-0 {
+     z-index: 0;
  }
 
  .btn {
@@ -297,9 +401,14 @@
          padding: 16px;
          border-radius: 20px;
          box-shadow: 8px 8px 0px rgba(0, 0, 0, 0.5);
-        &:hover{
-            background: lighten($c-secondary,20%);
-        }
+
+         &:hover {
+             background: lighten($c-secondary, 20%);
+         }
+
+         &.wrap {
+             @include fzlh($fz-xl, 28px);
+         }
      }
 
      &-sm {
@@ -309,10 +418,80 @@
      &-md {
          width: 280px;
      }
-     &-fixed__bottom{
-        position: absolute;
-        bottom:44px;
-        right: 48px;;
+
+     &-lg {
+         width: 301px;
+     }
+
+     &-fixed__bottom {
+         position: absolute;
+         bottom: 44px;
+         right: 48px;
+         ;
      }
  }
 
+ .dialog {
+     background: $c-primary;
+     color: $c-secondary;
+     margin: 0 0 0 30px;
+     padding: 16px 24px;
+     width: 100%;
+     border-radius: 16px;
+     @include fzlh($fz-md, $lh-lg);
+
+     span {
+         color: $c-tertiary;
+         font-weight: 500;
+     }
+
+     &-noPeople {
+         margin-left: calc(30px + 65px);
+     }
+
+     &-lh-md {
+         line-height: $lh-md;
+     }
+
+     &-left {
+         position: relative;
+
+         &::before {
+             border-color: transparent $c-primary transparent transparent;
+             /*上 右 下 左*/
+             border-style: solid;
+             border-width: 15px 20px 15px 0px;
+             /*三角形的高 30 寬 20*/
+
+             /* 必須指定，否則會變梯形 */
+             height: 0px;
+             /**/
+             width: 0px;
+
+             /* 必須指定，才能顯示內容 */
+             content: "";
+
+             position: absolute;
+             top: 15px;
+             left: -20px;
+             /*隨 寬度 變動*/
+         }
+     }
+ }
+
+ .modal {
+     &-body {
+         @include fzlh($fz-xl, $lh-sm);
+     }
+
+     a.btn {
+         display: block;
+     }
+ }
+
+ .li-style {
+     &-default {
+         list-style-type: disc;
+         list-style-position: inside;
+     }
+ }

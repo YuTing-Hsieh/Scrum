@@ -22,3 +22,9 @@ h1{
         margin-right: 18px;
     }
 }
+
+.l-list{
+    &__item+&__item{
+        margin-top: 24px;
+    }
+}

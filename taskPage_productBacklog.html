@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scrum 新手村</title>
+    <link rel="icon" href="image/favicon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
+    <link rel="stylesheet" href="css/all.css">
+</head>
+
+<body>
+    <div class="bg-default vh-100 d-flex justify-content-center align-items-center">
+        <div class="container pos-r d-flex flex-column align-items-center pt-175">
+            <div
+                class="dragbox-content border-solid border-5 radius-top-16 bg-tertiary d-flex justify-content-center align-items-center">
+                用 &nbsp; <span class="strong">拖移</span> &nbsp; 的方式調整優先順序</div>
+            <div id="productBacklogSort" class="dragbox d-flex border-5 border-solid radius-30">
+                <div class="poker d-flex flex-column justify-content-between draggable" draggable="true" data-id="2">
+                    <div class="poker-suits">A <img src="image/peach.png" alt="peach" class="img-peach"></div>
+                    <div class="poker-body text-center">會員系統 <br> (登入、註冊、權限管理)</div>
+                    <div class="poker-suits transXY">A <img src="image/peach.png" alt="peach" class="img-peach"></div>
+                </div>
+                <div class="poker d-flex flex-column justify-content-between draggable" draggable="true" data-id="3">
+                    <div class="poker-suits">A <img src="image/peach.png" alt="peach" class="img-peach"></div>
+                    <div class="poker-body text-center">應徵者的線上履歷編輯器</div>
+                    <div class="poker-suits transXY">A <img src="image/peach.png" alt="peach" class="img-peach"></div>
+                </div>
+                <div class="poker d-flex flex-column justify-content-between draggable" draggable="true" data-id="4">
+                    <div class="poker-suits">A <img src="image/peach.png" alt="peach" class="img-peach"></div>
+                    <div class="poker-body text-center">前台職缺列表 <br> (職缺詳細內容、點選可發送應徵意願)</div>
+                    <div class="poker-suits transXY">A <img src="image/peach.png" alt="peach" class="img-peach"></div>
+                </div>
+                <div class="poker d-flex flex-column justify-content-between draggable" draggable="true" data-id="1">
+                    <div class="poker-suits">A <img src="image/peach.png" alt="peach" class="img-peach"></div>
+                    <div class="poker-body text-center">後台職缺管理功能 <br> (資訊上架、下架、顯示應徵者資料)</div>
+                    <div class="poker-suits transXY">A <img src="image/peach.png" alt="peach" class="img-peach"></div>
+                </div>
+            </div>
+            <div class="dragbox-content border-solid border-5 radius-bottom-16 bg-secondary d-flex justify-content-between align-items-center px-24">
+                <p>高 ←</p> 
+                <p>優先權</p>
+                <p>→ 低</p>
+            </div>
+            <img src="image/coins.png" alt="籌碼" class="img-coins pos-a">
+            <img src="image/dice2.png" alt="骰子" class="img-dice2 pos-a">
+        </div>
+    </div>
+    <a href="introducePage_sprintPoint.html" class="btn btn-secondary btn-sm btn-fixed__bottom">
+        完成
+    </a>
+
+    <div class="modal bg-secondary" id="message">
+        <div class="modal-body d-flex flex-column align-items-center">
+            <p class="pb-30 messageContent"></p>
+            <a class="btn bg-tertiary btn-lg radius-9 py-10" rel="modal:close">確定</a>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+    <script src="js/Sortable.min.js"></script>
+    <script src="js/all.js"></script>
+</body>
+
+</html>
