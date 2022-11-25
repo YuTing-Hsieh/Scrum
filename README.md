@@ -20,5 +20,5 @@
 
 ## <i class="fa fa-paper-plane" aria-hidden="true"></i> 作品說明
 電腦版 為主，主要練習的部分：
-1.拖拉元素
-2.驗證拖拉結果
+* 拖拉元素
+* 驗證拖拉結果
